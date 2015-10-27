@@ -1,0 +1,471 @@
+<html>
+    <head>
+        <title>Easter</title>
+
+        <style type="text/css">
+            .egg
+            {
+                background-color:#dddddd;
+                -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+                border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+                width:200px;
+                height:300px;
+                margin:0 auto 0 auto;
+                overflow:hidden;
+            }
+
+            .pattern_wrapper
+            {
+                width:800px;
+                height:300px;
+                border:0px solid #FF0000;
+            }
+
+            .patterns
+            {
+                width:200px;
+                height:300px;
+                overflow:hidden;
+                position:relative;
+                float:left;
+                border:0px solid #000000;
+            }
+
+            .pattern
+            {
+                position:absolute;
+                width:200px;
+                height:300px;
+                margin-left:0px;
+                margin-top:0px;
+                overflow:hidden;
+            }
+
+            .pattern1
+            {
+                z-index:10;
+                background-color:#FFFF00;
+            }
+
+            .pattern1:before
+            {
+                content:"";
+                display:block;
+                background-color:#FFAA99;
+                width:200px;
+                height:200px;
+                margin-top:-100px;
+            }
+
+            .pattern2,.pattern2a
+            {
+                z-index:20;
+            }
+
+            .pattern2:before
+            {
+                content:": :";
+                font-size:120px;
+                color:#FF5555;
+                display:block;
+                position:absolute;
+                transform:rotate(45deg);
+                margin-top:80px;
+                margin-left:20px;
+            }
+
+            .pattern2:after
+            {
+                content:":";
+                font-size:240px;
+                color:#FF5555;
+                display:block;
+                position:absolute;
+                transform:rotate(5deg);
+                margin-top:-80px;
+                margin-left:100px;
+            }
+
+            .pattern3,.pattern3a
+            {
+                z-index:30;
+            }
+
+            .pattern3:before
+            {
+                content:"";
+                display:block;
+                width:80px;
+                height:150px;
+                -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+                border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+                box-shadow: -10px -15px 0 0px #FF8800;
+                margin-left:20px;
+                margin-top:20px;
+                -ms-transform: rotate(-20deg); /* IE 9 */
+                -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+            }
+
+            .pattern3:after
+            {
+                content:"";
+                display:block;
+                width:80px;
+                height:150px;
+                -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+                border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+                box-shadow: 5px 10px 0 10px #FF8800;
+                margin-left:50px;
+                margin-top:-20px;
+                -ms-transform: rotate(-20deg); /* IE 9 */
+                -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+            }
+
+            .pattern2a:before
+            {
+                content:". .:";
+                font-size:150px;
+                color:#FF5555;
+                display:block;
+                position:absolute;
+                transform:rotate(55deg);
+                margin-top:50px;
+                margin-left:20px;
+            }
+
+            .pattern2a:after
+            {
+                content:":";
+                font-size:270px;
+                color:#FF5555;
+                display:block;
+                position:absolute;
+                transform:rotate(-45deg);
+                margin-top:-80px;
+                margin-left:50px;
+            }
+
+
+            .pattern3a:before
+            {
+                content:"";
+                display:block;
+                width:80px;
+                height:100px;
+                -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+                border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+                box-shadow: 10px -10px 0 0px #DD00FF;
+                margin-left:60px;
+                margin-top:20px;
+                -ms-transform: rotate(120deg); /* IE 9 */
+                -webkit-transform: rotate(120deg); /* Chrome, Safari, Opera */
+            }
+
+            .pattern3a:after
+            {
+                content:"";
+                display:block;
+                width:80px;
+                height:180px;
+                -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+                border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+                box-shadow: -10px 10px 0 10px #DD00FF;
+                margin-left:50px;
+                margin-top:-20px;
+                -ms-transform: rotate(-80deg); /* IE 9 */
+                -webkit-transform: rotate(-80deg); /* Chrome, Safari, Opera */
+            }
+
+
+            .spin_left
+
+            {
+
+                -webkit-animation: spinleft 2s linear infinite; /* Chrome, Safari, Opera */
+
+                animation: spinleft 2s linear infinite;
+
+            }
+
+
+            /* Chrome, Safari, Opera */
+
+            @-webkit-keyframes spinleft
+
+            {
+
+                from {margin-left: 0px;}
+
+                to {margin-left: -400px;}
+
+            }
+
+
+            /* Standard syntax */
+
+            @keyframes spinleft
+
+            {
+
+                from {margin-left: 0px;}
+
+                to {margin-left: -400px;}
+
+            }
+
+
+            .spin_right
+
+            {
+
+                -webkit-animation: spinright 2s linear infinite; /* Chrome, Safari, Opera */
+
+                animation: spinright 2s linear infinite;
+
+            }
+
+
+            /* Chrome, Safari, Opera */
+
+            @-webkit-keyframes spinright
+
+            {
+
+                from {margin-left: -400px;}
+
+                to {margin-left: 0px;}
+
+            }
+
+
+            /* Standard syntax */
+
+            @keyframes spinright
+
+            {
+
+                from {margin-left: -400px;}
+
+                to {margin-left: 0px;}
+
+            }
+
+
+            .egg_reflection
+
+            {
+
+                opacity: 0.6;
+
+                filter: alpha(opacity=60); /* For IE8 and earlier */
+
+                -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+
+                border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+
+                width:200px;
+
+                height:300px;
+
+                position:absolute;
+
+                z-index:100;
+
+
+                background: -moz-radial-gradient(100px 100px, ellipse cover,  #FFFFFF 0%, #444444 58%); /* FF3.6+ */
+
+                background: -webkit-gradient(radial, 100px 100px, 0px, center center, 100%, color-stop(0%,#FFFFFF), color-stop(58%,#444444)); /* Chrome,Safari4+ */
+
+                background: -webkit-radial-gradient(100px 100px, ellipse cover,  #FFFFFF 0%,#444444 58%); /* Chrome10+,Safari5.1+ */
+
+                background: -o-radial-gradient(100px 100px, ellipse cover,  #FFFFFF 0%,#444444 58%); /* Opera 12+ */
+
+                background: -ms-radial-gradient(100px 100px, ellipse cover,  #FFFFFF 0%,#444444 58%); /* IE10+ */
+
+                background: radial-gradient(ellipse at 100px 100px,  #FFFFFF 0%,#444444 58%); /* W3C */
+
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#444444',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+            }
+
+
+            .egg_shadow
+
+            {
+
+                border-radius: 50%;
+
+                width:150px;
+
+                height:10px;
+
+                box-shadow: 0px 20px 5px 5px #444444;
+
+                background:none;
+
+                margin:-20px auto 0 auto;
+
+            }
+
+        </style>
+
+
+        <script>
+
+            function spin_left()
+
+            {
+
+                var egg=document.getElementById("eggpattern");
+
+                egg.className="pattern_wrapper spin_left";
+
+            }
+
+
+            function spin_right()
+
+            {
+
+                var egg=document.getElementById("eggpattern");
+
+                egg.className="pattern_wrapper spin_right";
+
+            }
+
+        </script>
+
+    </head>
+
+
+    <body>
+
+        <div class="egg">
+
+            <div class="egg_reflection">
+
+
+            </div>
+
+            <div id="eggpattern" class="pattern_wrapper spin_left">
+
+                <div class="patterns">
+
+                    <div class="pattern_wrapper">
+
+                        <div class="pattern pattern1">
+
+                         
+
+                        </div>
+
+                        <div class="pattern pattern2">
+
+                         
+
+                        </div>
+
+                        <div class="pattern pattern3">
+
+                         
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="patterns">
+
+                    <div class="pattern_wrapper">
+
+                        <div class="pattern pattern1">
+
+                         
+
+                        </div>
+
+                        <div class="pattern pattern2a">
+
+                         
+
+                        </div>
+
+                        <div class="pattern pattern3a">
+
+                         
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="patterns">
+
+                    <div class="pattern_wrapper">
+
+                        <div class="pattern pattern1">
+
+                         
+
+                        </div>
+
+                        <div class="pattern pattern2">
+
+                         
+
+                        </div>
+
+                        <div class="pattern pattern3">
+
+                         
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="patterns">
+
+                    <div class="pattern_wrapper">
+
+                        <div class="pattern pattern1">
+
+                         
+
+                        </div>
+
+                        <div class="pattern pattern2a">
+
+                         
+
+                        </div>
+
+                        <div class="pattern pattern3a">
+
+                         
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="egg_shadow">
+
+
+        </div>
+
+        <input type="button" value="<" onclick="spin_left();">
+
+        <input type="button" value=">" onclick="spin_right();">
+
+    </body>
+
+</html>
