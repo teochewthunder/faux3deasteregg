@@ -1,2 +1,2 @@
 # faux3deasteregg
-Faux 3D easter egg
+Faux 3D Easter egg
