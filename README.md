@@ -1,2 +1,2 @@
-# wayangprogressbar
-The Wayang Progress Bar
+# faux3deasteregg
+Faux 3D easter egg
