@@ -176,296 +176,166 @@
                 -webkit-transform: rotate(-80deg); /* Chrome, Safari, Opera */
             }
 
-
             .spin_left
-
             {
-
                 -webkit-animation: spinleft 2s linear infinite; /* Chrome, Safari, Opera */
-
                 animation: spinleft 2s linear infinite;
-
             }
-
 
             /* Chrome, Safari, Opera */
 
             @-webkit-keyframes spinleft
-
             {
-
                 from {margin-left: 0px;}
-
                 to {margin-left: -400px;}
-
             }
-
 
             /* Standard syntax */
 
             @keyframes spinleft
-
             {
-
                 from {margin-left: 0px;}
-
                 to {margin-left: -400px;}
-
             }
-
 
             .spin_right
-
             {
-
                 -webkit-animation: spinright 2s linear infinite; /* Chrome, Safari, Opera */
-
                 animation: spinright 2s linear infinite;
-
             }
-
 
             /* Chrome, Safari, Opera */
 
             @-webkit-keyframes spinright
-
             {
-
                 from {margin-left: -400px;}
-
                 to {margin-left: 0px;}
-
             }
-
 
             /* Standard syntax */
 
             @keyframes spinright
-
             {
-
                 from {margin-left: -400px;}
-
                 to {margin-left: 0px;}
-
             }
-
 
             .egg_reflection
-
             {
-
                 opacity: 0.6;
-
                 filter: alpha(opacity=60); /* For IE8 and earlier */
-
                 -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
-
                 border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-
                 width:200px;
-
                 height:300px;
-
                 position:absolute;
-
                 z-index:100;
 
-
                 background: -moz-radial-gradient(100px 100px, ellipse cover,  #FFFFFF 0%, #444444 58%); /* FF3.6+ */
-
                 background: -webkit-gradient(radial, 100px 100px, 0px, center center, 100%, color-stop(0%,#FFFFFF), color-stop(58%,#444444)); /* Chrome,Safari4+ */
-
                 background: -webkit-radial-gradient(100px 100px, ellipse cover,  #FFFFFF 0%,#444444 58%); /* Chrome10+,Safari5.1+ */
-
                 background: -o-radial-gradient(100px 100px, ellipse cover,  #FFFFFF 0%,#444444 58%); /* Opera 12+ */
-
                 background: -ms-radial-gradient(100px 100px, ellipse cover,  #FFFFFF 0%,#444444 58%); /* IE10+ */
-
                 background: radial-gradient(ellipse at 100px 100px,  #FFFFFF 0%,#444444 58%); /* W3C */
-
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#444444',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
             }
-
 
             .egg_shadow
-
             {
-
                 border-radius: 50%;
-
                 width:150px;
-
                 height:10px;
-
                 box-shadow: 0px 20px 5px 5px #444444;
-
                 background:none;
-
                 margin:-20px auto 0 auto;
-
             }
-
         </style>
 
-
         <script>
-
             function spin_left()
-
             {
-
                 var egg=document.getElementById("eggpattern");
-
                 egg.className="pattern_wrapper spin_left";
-
             }
-
 
             function spin_right()
-
             {
-
                 var egg=document.getElementById("eggpattern");
-
                 egg.className="pattern_wrapper spin_right";
-
             }
-
         </script>
-
     </head>
 
-
     <body>
-
         <div class="egg">
-
             <div class="egg_reflection">
-
 
             </div>
 
             <div id="eggpattern" class="pattern_wrapper spin_left">
-
                 <div class="patterns">
-
                     <div class="pattern_wrapper">
-
                         <div class="pattern pattern1">
-
                          
-
                         </div>
-
                         <div class="pattern pattern2">
-
                          
-
                         </div>
-
                         <div class="pattern pattern3">
-
                          
-
                         </div>
-
                     </div>
-
                 </div>
 
                 <div class="patterns">
-
                     <div class="pattern_wrapper">
+                        <div class="pattern pattern1">
+                        
+                        </div>
+                        <div class="pattern pattern2a">
+                         
+                        </div>
+                        <div class="pattern pattern3a">
+                         
+                        </div>
+                    </div>
+                </div>
 
+                <div class="patterns">
+                    <div class="pattern_wrapper">
+                        <div class="pattern pattern1">
+                         
+                        </div>
+                        <div class="pattern pattern2">
+                         
+                        </div>
+                        <div class="pattern pattern3">
+                         
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="patterns">
+                    <div class="pattern_wrapper">
                         <div class="pattern pattern1">
 
-                         
-
                         </div>
-
                         <div class="pattern pattern2a">
 
-                         
-
                         </div>
-
                         <div class="pattern pattern3a">
 
-                         
-
                         </div>
-
                     </div>
-
                 </div>
-
-                <div class="patterns">
-
-                    <div class="pattern_wrapper">
-
-                        <div class="pattern pattern1">
-
-                         
-
-                        </div>
-
-                        <div class="pattern pattern2">
-
-                         
-
-                        </div>
-
-                        <div class="pattern pattern3">
-
-                         
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="patterns">
-
-                    <div class="pattern_wrapper">
-
-                        <div class="pattern pattern1">
-
-                         
-
-                        </div>
-
-                        <div class="pattern pattern2a">
-
-                         
-
-                        </div>
-
-                        <div class="pattern pattern3a">
-
-                         
-
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
-
         </div>
 
         <div class="egg_shadow">
 
-
         </div>
 
         <input type="button" value="<" onclick="spin_left();">
-
         <input type="button" value=">" onclick="spin_right();">
-
     </body>
-
 </html>
